@@ -1,8 +1,8 @@
 //Profile Sub_title
-let typed = new Typed(".profile_subtitle", {
+let typed = new Typed(".home_subtitle", {
     strings: ["Junior Web Developer", "Junior Software Developer"],
-    typeSpeed: 150,
-    backSpeed: 150,
+    typeSpeed: 100,
+    backSpeed: 100,
     loop: true,
   });
 

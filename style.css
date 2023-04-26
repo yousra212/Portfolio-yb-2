@@ -15,7 +15,7 @@
     --textColor: black;
     --bgColor: #F2E7DD;
 }
-/* ------ Header ------ */
+/* -------------------------- HEADER -------------------- */
 header{
     height: 100vh;
     width: 300px;
@@ -142,6 +142,142 @@ header .footer{
 .mobile-nav-active header .footer{
     left: 0;
 }
+/* -------------------------- MAIN -------------------- */
+main{
+    margin-left: 300px;
+    background-color: var(--bgColor);
+    transition:0.3s;
+}
+@media only screen and (max-width: 1050px) {
+    main{
+        margin-left: 0;
+    }
+}
+/* --------- Home Section -------- */
+#home{
+    height: 100vh;
+    width: 100%;
+    background-image: url(./images/Landing_image.png);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 70px;
+    position: relative;
+    opacity: 0.75;
+}
+#home::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#home .home-row{
+    z-index: 1;
+}
+#home .home-row h1{
+    color: var(--bgColor);
+    position: relative;
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 70px;
+}
+#home .home-row h1 span{
+    color: var(--themeColor);
+}
+#home .home-row p{
+    color: var(--bgColor);
+    font-size: 35px;
+    font-weight: 500;
+}
+#home .home-row p span{
+    border-bottom: 4px solid var(--themeColor);
+}
+/* -------Mobile View---------- */
+@media only screen and (max-width: 670px) {
+    #home{
+        padding: 30px;
+    }
+    #home .home-row h1{
+        font-size: 35px;
+        line-height: 50px;
+        letter-spacing: 0;
+    }
+    #home .home-row h1 br{
+        display: none;
+    }
+    #home .home-row p{
+        color: var(--bgColor);
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+/* --------- About Section -------- */
+#about{
+    padding: 70px 30px;
+}
+/* --------- General Heading -------- */
+.sub-heading{
+    color: var(--sideBGColor);
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+/* --------- Common divider in all the sections -------- */
+.divider{
+    width: 100px;
+    height: 6px;
+    background-color: var(--themeColor);
+    border-radius: 3px;
+}
+#about .about-col{
+    display: flex;
+    gap: 30px;
+    padding-inline: 1rem;
+    margin-top: 25px;
+}
+#about .about-col .text-col{
+    flex-basis: 70% ;
+    flex-grow: 1;
+    align-items: center;
+    padding-top: 180px;
+    /* padding-right: 15px; */
+    text-align: justify;
+    font-size: 20px;
+    color: var(--sideBGColor);
+    font-weight: 300;
+}
+/* ---- Mobile View ----*/
+@media only screen and (max-width: 850px){
+    #about{
+        padding: 50px 10px;
+    }
+    #about .about-col{
+        flex-direction: column;
+        gap: 0;
+    }
+    #about .about-col .img-col img{
+        width: 100%
+    }
+    #about .about-col .text-col{
+        padding-top: 10px;
+        padding-right: 5px;
+        margin-bottom: 45px;
+        font-size: 18px;
+        color: var(--sideBGColor);
+    }
+    @media only screen and (max-width: 400px){
+        #about .about-col .img-col img{
+            width: 90%
+        }
+    }
+}
+
+
 
 
 
