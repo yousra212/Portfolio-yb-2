@@ -10,7 +10,7 @@
 /* General Variables */
 :root{
     --sideBGColor:#2A1409;
-    --themeColor: #DB6009;
+    --themeColor: #db6009;
     --iconBGColor: #F2E7DD;
     --textColor: black;
     --bgColor: #F2E7DD;
@@ -220,6 +220,8 @@ main{
 /* --------- About Section -------- */
 #about{
     padding: 70px 30px;
+    height: 100vh;
+    width: 100%;
 }
 /* --------- General Heading -------- */
 .sub-heading{
@@ -276,6 +278,260 @@ main{
         }
     }
 }
+/* --------- Skills Section -------- */
+#skills {
+    color: var(--sideBGColor);
+    padding: 20px;
+    margin-bottom: 30px;
+    height: 100vh;
+    width: 100%;
+  }
+  .skills_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+  .skill-item {
+    text-align: center;
+    color: var(--sideBGColor);
+    margin-bottom: 40px;
+  }
+  .skill-item i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  .skill-item h2 {
+    margin: 10px 0;
+  }
+/* -----------Mobile View --------------- */
+@media only screen and (max-width: 650px){
+    #skills {
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .skills_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        font-size: 15px;
+      }
+}
+@media only screen and (max-width: 350px){
+    .skills_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .skill-item {
+        text-align: center;
+        color: var(--sideBGColor);
+        margin-bottom: 20px;
+        font-size: 10px;
+        /* gap: 10px; */
+      }
+}
+/* ------------ Projects ----------------- */
+ #projects{
+    padding: 50px 30px;
+    height: 100vh;
+    width: 100%;
+  }
+  #projects .project-row {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+  #projects .project-row .project-item{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+  }
+  #projects .project-row .project-item .project-img img{
+    width: 100%;
+    border-radius: 10px;
+ }
+ #projects .project-row .project-item .project-infos{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(219, 96, 9, 1)  0%, rgba(219, 96, 9, 1) 100%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0)  ;
+    transition: 1s;
+    border-radius: 10px;
+    visibility: hidden;
+}
+#projects .project-row .project-item:hover .project-infos{
+  transform: scale(1)  ;
+  visibility: visible;
+}
+#projects .project-row .project-item:hover .project-infos h4{
+  color: var(--sideBGColor);
+  font-size: 25px;
+  font-weight: bold;
+}
+#projects .project-row .project-item:hover .project-infos h4 + p{
+  color: var(--sideBGColor);
+  font-size: 14px;
+  padding: 15px;
+}
+#projects .project-row .project-item:hover .project-infos a{
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 10px;
+  width: 45px;
+  color: var(--bgColor);
+}
+/* -----------Mobile View---------- */
+@media only screen and (max-width: 650px){
+    #projects{
+        padding: 30px 10px;
+      }
+      #projects .project-row {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+      }
+}
+@media only screen and (max-width: 350px){
+    #projects .project-row {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px;
+      }
+}
+/* ------------ Contact ----------------- */
+#contact {
+    padding: 30px 10px;
+    height: 100vh;
+    width: 100%;
+  }
+  /* .sub-paragraph{
+    color: rgb(214, 207, 203);
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+  } */
+  #contact .contact-row{
+    margin: 30px;
+    display:flex;
+    gap: 30px;
+    /* width: 100%; */
+   }
+   #contact .contact-row .contact-left{
+    flex-basis: auto;
+    min-width: 35%;
+    background-color: var(--sideBGColor);
+    box-shadow: 0 0 20px rgba(0,0,0,20%) ;
+    border-radius: 40px;
+    padding: 60px 30px;
+  }
+  #contact .contact-row .contact-left .icon-box{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin : 30px 0;
+    color: var(--themeColor);
+  }
+  #contact .contact-row .contact-left .icon-box .icon i {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--themeColor);
+    text-align: center;
+    line-height: 47px;
+    font-size: 20px;
+    color: var(--themeColor);
+    transition: 0.5s;
+}
+#contact .contact-row .contact-left .icon-box:hover .icon i{
+  background-color :rgba(0, 0, 0, 0.2);
+  color: var(--bgColor);
+}
+#contact .contact-row .contact-left .icon-box .info h4{
+  font-size: 20px;
+  color: var(--bgColor);
+  font-weight: 600;
+}
+#contact .contact-row .contact-left .icon-box .info h4 + p{
+  color: var(--bgColor);
+  font-size: 15px;
+  font-weight: 500;
+}
+#contact .contact-row .contact-right{
+  flex-basis: auto;
+  min-width: 50%;
+  background-color: var(--sideBGColor);
+  box-shadow: 0 0 10px rgba(0,0,0,20%) ;
+  border-radius: 40px;
+  padding: 30px;
+}
+#contact .contact-row .contact-right form input,
+#contact .contact-row .contact-right form textarea{
+  display: block;
+  width: 100%;
+  margin: 40px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--themeColor);
+  padding: 10px 5px;
+  border: 2px solid lightgray;
+  border-radius: 2px;
+  outline: none;
+  resize: none;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+#contact .contact-row .contact-right form input:focus,
+#contact .contact-row .contact-right form textarea:focus{
+  border: 3px solid var(--themeColor);
+}
+#contact .contact-row .contact-right form input[type=submit]{
+  background-color: var(--themeColor);
+  color: var(--bgColor);
+  border: 2px solid var(--bgColor);
+  font-size: 17px;
+  font-weight: 400;
+  cursor: pointer;
+}
+#contact .contact-row .contact-right form input[type=submit]:hover{
+  background-color: var(--bgColor);
+  color: var(--themeColor);
+  border: 2px solid var(--themeColor);
+}
+/* Mobile */
+@media only screen and (max-width: 800px){
+  #contact {
+    padding: 50px;
+  }
+  #contact .contact-row{
+    flex-direction: column;
+    gap: 20px;
+   }
+}
+@media only screen and (max-width: 350px){
+    #contact {
+      padding: 20px;
+    }
+    #contact .contact-row{
+      flex-direction: column;
+      gap: 10px;
+      font-size: 10px;
+     }
+  }
 
 
 
