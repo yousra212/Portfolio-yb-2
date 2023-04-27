@@ -229,7 +229,6 @@ main{
     font-size: 40px;
     margin-bottom: 10px;
 }
-/* --------- Common divider in all the sections -------- */
 .divider{
     width: 100px;
     height: 6px;
@@ -281,13 +280,14 @@ main{
 /* --------- Skills Section -------- */
 #skills {
     color: var(--sideBGColor);
-    padding: 20px;
-    margin-bottom: 30px;
+    padding: 70px 30px;
+    /* margin-bottom: 30px; */
     height: 100vh;
     width: 100%;
   }
   .skills_container {
     display: grid;
+    place-content: center;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-top: 70px;
@@ -335,7 +335,7 @@ main{
 }
 /* ------------ Projects ----------------- */
  #projects{
-    padding: 50px 30px;
+    padding: 70px 30px;
     height: 100vh;
     width: 100%;
   }
@@ -348,13 +348,13 @@ main{
   #projects .project-row .project-item{
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 3px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
-  }
+}
   #projects .project-row .project-item .project-img img{
     width: 100%;
-    border-radius: 10px;
- }
+    border-radius: 3px;
+}
  #projects .project-row .project-item .project-infos{
     position: absolute;
     top: 0;
@@ -369,8 +369,12 @@ main{
     align-items: center;
     transform: scale(0)  ;
     transition: 1s;
-    border-radius: 10px;
+    border-radius: 3px;
     visibility: hidden;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 #projects .project-row .project-item:hover .project-infos{
   transform: scale(1)  ;
@@ -412,30 +416,35 @@ main{
 }
 /* ------------ Contact ----------------- */
 #contact {
-    padding: 30px 10px;
-    height: 100vh;
-    width: 100%;
+    padding: 70px 0;
+    min-height: 100vh;
+    min-width: 100%;
+    background-color: var(--bgColor);
   }
-  /* .sub-paragraph{
-    color: rgb(214, 207, 203);
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-  } */
+  .margin{
+    margin-left: 30px;
+  }
   #contact .contact-row{
-    margin: 30px;
+    padding: 3rem 0;
     display:flex;
-    gap: 30px;
-    /* width: 100%; */
-   }
+    flex-direction: row; 
+    justify-content: space-around;
+    background-color: var(--bgColor);
+    /* gap: 30px;  */
+     /* width: 100%; */
+}
    #contact .contact-row .contact-left{
-    flex-basis: auto;
-    min-width: 35%;
+    width: 40%;
+    height: 20%;
     background-color: var(--sideBGColor);
     box-shadow: 0 0 20px rgba(0,0,0,20%) ;
-    border-radius: 40px;
-    padding: 60px 30px;
-  }
+    border-radius: 3px;
+    padding: 30px 30px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
   #contact .contact-row .contact-left .icon-box{
     display: flex;
     gap: 15px;
@@ -446,7 +455,7 @@ main{
   #contact .contact-row .contact-left .icon-box .icon i {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 3px;
     border: 2px solid var(--themeColor);
     text-align: center;
     line-height: 47px;
@@ -469,22 +478,26 @@ main{
   font-weight: 500;
 }
 #contact .contact-row .contact-right{
-  flex-basis: auto;
-  min-width: 50%;
+  width: 40%;
+  height: 15%;
   background-color: var(--sideBGColor);
   box-shadow: 0 0 10px rgba(0,0,0,20%) ;
-  border-radius: 40px;
+  border-radius: 3px;
   padding: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 #contact .contact-row .contact-right form input,
 #contact .contact-row .contact-right form textarea{
   display: block;
   width: 100%;
-  margin: 40px 0;
+  margin: 25px 0;
   font-size: 15px;
   font-weight: 500;
   color: var(--themeColor);
-  padding: 10px 5px;
+  padding: 5px 5px;
   border: 2px solid lightgray;
   border-radius: 2px;
   outline: none;

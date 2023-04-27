@@ -24,3 +24,22 @@ navLinks.forEach(link => {
     section.scrollIntoView({behavior: 'smooth'});
   });
 });
+
+// Active link state on scroll
+let sections = document.querySelectorAll('section');
+window.addEventListener('scroll', function(){
+  const scrollPost = this.window.scrollY
+  sections.forEach(section => {
+    if(section.offsetTop <= scrollPost && section.offsetTop + section.offsetHeight > scrollPost){
+      navLinks.forEach(link => {
+        link.classList.remove('active')
+        if(section.getAttribute('id') === link.getAttribute('href').substring(1)){
+          link.classList.add('active')
+        }
+      })
+    }
+  })
+});
+
+
+
