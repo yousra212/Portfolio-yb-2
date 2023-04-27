@@ -34,7 +34,7 @@ header .profile{
     margin: 10px 0;
 }
 header .profile img{
-    width: 150px;
+    width: 120px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--bgColor);
@@ -42,7 +42,21 @@ header .profile img{
 header .profile h1{
     color: var(--bgColor);
     font-weight: 600;
+    line-height: 50px;
+    font-size: 40px;
     padding-top: 15px;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--bgColor);
+    background: url(./images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    -webkit-animation: back 50s linear infinite;
+}
+@keyframes back{
+  100%{
+    background-position: 2000px 0;
+  }
 }
 header .profile p{
     color: var(--bgColor);
