@@ -266,6 +266,23 @@ main{
     color: var(--sideBGColor);
     font-weight: 300;
 }
+#about .about-col .text-col p{
+  margin-bottom: 50px;
+}
+button{
+  background-color: var(--themeColor);
+  color: var(--bgColor);
+  border: 2px solid var(--bgColor);
+  font-size: 17px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+button:hover{
+  background-color: var(--bgColor);
+  color: var(--themeColor);
+  border: 2px solid var(--themeColor);
+}
 /* ---- Mobile View ----*/
 @media only screen and (max-width: 850px){
     #about{
@@ -356,85 +373,88 @@ main{
       }
 }
 /* ------------ Projects ----------------- */
- #projects{
-    padding: 70px 30px;
-    height: 100vh;
-    width: 100%;
-  }
-  #projects .project-row {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
-  }
-  #projects .project-row .project-item{
-    position: relative;
-    overflow: hidden;
-    border-radius: 3px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+#projects{
+  padding: 70px 30px;
+  height: 100vh;
+  width: 100%;
 }
-  #projects .project-row .project-item .project-img img{
-    width: 100%;
-    border-radius: 3px;
+#projects .project-row {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
 }
- #projects .project-row .project-item .project-infos{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(219, 96, 9, 1)  0%, rgba(219, 96, 9, 1) 100%);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: scale(0)  ;
-    transition: 1s;
-    border-radius: 3px;
-    visibility: hidden;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
+#projects .project-row .project-item{
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+}
+#projects .project-row .project-item .project-img img{
+  width: 100%;
+  border-radius: 3px;
+}
+#projects .project-row .project-item .project-infos{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(219, 96, 9, 1)  0%, rgba(219, 96, 9, 1) 100%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0)  ;
+  transition: 1s;
+  border-radius: 3px;
+  visibility: hidden;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 #projects .project-row .project-item:hover .project-infos{
-  transform: scale(1)  ;
-  visibility: visible;
+transform: scale(1)  ;
+visibility: visible;
 }
 #projects .project-row .project-item:hover .project-infos h4{
-  color: var(--sideBGColor);
-  font-size: 25px;
-  font-weight: bold;
+color: var(--sideBGColor);
+font-size: 25px;
+font-weight: bold;
 }
 #projects .project-row .project-item:hover .project-infos h4 + p{
-  color: var(--sideBGColor);
-  font-size: 14px;
-  padding: 15px;
+color: var(--sideBGColor);
+font-size: 14px;
+padding: 20px;
+}
+#projects .project-row .project-item:hover .project-infos p{
+padding: 5px;
 }
 #projects .project-row .project-item:hover .project-infos a{
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  margin-top: 10px;
-  width: 45px;
-  color: var(--bgColor);
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
+margin-top: 10px;
+width: 45px;
+color: var(--bgColor);
 }
 /* -----------Mobile View---------- */
 @media only screen and (max-width: 650px){
-    #projects{
-        padding: 30px 10px;
-      }
-      #projects .project-row {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 15px;
-      }
+  #projects{
+      padding: 30px 10px;
+    }
+    #projects .project-row {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+    }
 }
 @media only screen and (max-width: 350px){
-    #projects .project-row {
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 15px;
-      }
+  #projects .project-row {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 15px;
+    }
 }
 /* ------------ Contact ----------------- */
 #contact {
