@@ -37,7 +37,7 @@ header .profile img{
     width: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--bgColor);
+    border: 2px solid #db6009;
 }
 header .profile h1{
     color: var(--bgColor);
@@ -273,10 +273,11 @@ button{
   background-color: var(--themeColor);
   color: var(--bgColor);
   border: 2px solid var(--bgColor);
-  font-size: 17px;
-  font-weight: 400;
+  font-size: 28px;
+  font-weight: 500;
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 15px 25px;
+  border-radius: 5px;
 }
 button:hover{
   background-color: var(--bgColor);
@@ -298,9 +299,18 @@ button:hover{
     #about .about-col .text-col{
         padding-top: 10px;
         padding-right: 5px;
-        margin-bottom: 45px;
+        margin-bottom: 20px;
         font-size: 18px;
         color: var(--sideBGColor);
+    }
+    #about .about-col .text-col p{
+        margin-bottom: 20px;
+    }
+    #about .about-col .text-col button{
+        font-size: 20px;
+        border: 2px solid var(--themeColor);
+        padding: 10px 20px;
+        margin-bottom: 10px;
     }
     @media only screen and (max-width: 400px){
         #about .about-col .img-col img{
