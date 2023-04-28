@@ -42,12 +42,7 @@ window.addEventListener('scroll', function(){
 });
 
 //Carousel
-$(document).ready(function() {
-  var carousel = $(".carousel");
-  var container = $(".container");
-  var cardWidth = $(".card").outerWidth(true);
-  var visibleCards = Math.floor(carousel.width() / cardWidth); 
-  });
+
 
 
 

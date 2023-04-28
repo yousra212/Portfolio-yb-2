@@ -388,11 +388,11 @@ button:hover{
     height: 100vh;
     width: 100%;
 }
-#projects .projects-row{
+#projects .projects-row {
   margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
+  grid-gap: 20px;
 }
 .container {
   position: relative;
@@ -408,7 +408,7 @@ button:hover{
   max-width: 290px;
   height: 215px;
   background-color: var(--sideBGColor);
-  margin: 70px 20px; 
+  margin: 110px 15px; 
   padding: 20px 15px;
   display: flex;
   flex-direction: column;
@@ -429,7 +429,6 @@ button:hover{
 }
 .container .card .image img {
   max-width: 100%;
-  /* border-radius: 15px; */
 }
 .container .card .content {
   position: relative;
@@ -441,6 +440,10 @@ button:hover{
   visibility: hidden;
   opacity: 0;
   transition: 0.3s ease-in-out;
+}
+.container .card .content p{
+  font-size: 15px;
+  margin-top: 15px;
 }
 .container .card:hover .content {
   margin-top: 30px;
