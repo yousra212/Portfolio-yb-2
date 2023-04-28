@@ -415,6 +415,9 @@ button:hover{
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out;
 }
+.container .card i{
+  color: var(--themeColor);
+}
 .container .card:hover {
   height: 300px;
 }
